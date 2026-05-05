@@ -1,0 +1,17 @@
+# Virtual environment
+venv/
+
+# Config with credentials
+*config.ini
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# CSV data files (usually too large to commit)
+*.csv
+
+# OS files
+.DS_Store
+Thumbs.db
