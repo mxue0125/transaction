@@ -48,9 +48,10 @@ def load_csv_to_staging(cursor, filepath, source_file):
     rows_inserted = 0
     rows_skipped = 0
     rows_duplicate = 0
-    empty_row = 0
 
     with open(filepath, newline='', encoding='utf-8-sig') as f:
+        for _ in range(2):  ## Skip the first two empty line from download csv file
+            next(f, None)
         reader = csv.DictReader(f)
 ## debug the data
         # for i, row in enumerate(reader):
